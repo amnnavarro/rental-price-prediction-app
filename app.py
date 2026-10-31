@@ -5,10 +5,11 @@ import joblib
 import numpy as np
 import os
 
-# Define model path
+# Define model path relative to the app.py location
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 MODEL_PATH = os.path.join(
-    PROJECT_DIR,
-    "deployment_files",
+    BASE_DIR,
     "rental_price_prediction_model_v1_0.joblib"
 )
 
